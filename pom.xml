@@ -45,5 +45,21 @@
             <scope>test</scope>
         </dependency>
 
-    </dependencies>    
+    </dependencies>  
+    
+    <build>
+        <plugins>
+            <!-- adicionar para ele não tentar executar os testes ao limpar e construir -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.12</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>   
+        </plugins>
+        
+    </build>
+     
 </project>
